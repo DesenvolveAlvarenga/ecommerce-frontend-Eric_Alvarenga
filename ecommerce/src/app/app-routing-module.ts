@@ -8,6 +8,9 @@ const routes: Routes = [
   }, {
     path: 'produtos',
     loadChildren: () => import('./produtos/produtos-module').then(m => m.ProdutosModule)
+  }, {
+    path: 'listaexe',
+    loadChildren: ()=> import('./listaexe/listaexe-module').then(m => m.ListaexeModule)
   }
 ];
 
