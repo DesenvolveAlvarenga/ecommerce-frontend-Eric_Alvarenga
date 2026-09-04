@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
   templateUrl: './exe06.html',
   styleUrl: './exe06.scss',
 })
-export class Exe06 {}
+export class Exe06 {
+  curtida = 0
+
+  curtir (){
+    this.curtida++
+  }
+
+  descurtir(){
+    this.curtida--
+  }
+}

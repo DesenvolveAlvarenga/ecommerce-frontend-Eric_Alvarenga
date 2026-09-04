@@ -13,4 +13,6 @@ export class Exe05 {
   curtir (){
     this.curtida++
   }
+
+
 }

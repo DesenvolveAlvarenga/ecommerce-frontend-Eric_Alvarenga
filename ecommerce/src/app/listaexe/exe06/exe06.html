@@ -1,1 +1,14 @@
-<p>exe06 works!</p>
+<h1>Exe 06</h1>
+
+
+<p>Curtidas {{ curtida }} </p>
+
+<button (click)="curtir()">
+    Curtir
+</button>
+
+@if(curtida > 0){
+<button (click)="descurtir()">
+    Descurtir
+</button>
+}
