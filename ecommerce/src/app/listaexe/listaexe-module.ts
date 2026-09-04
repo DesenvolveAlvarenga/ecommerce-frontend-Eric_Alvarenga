@@ -11,9 +11,10 @@ import { Exe05 } from './exe05/exe05';
 import { Exe06 } from './exe06/exe06';
 import { Exe07 } from './exe07/exe07';
 import { Exe08 } from './exe08/exe08';
+import { Exe09 } from './exe09/exe09';
 
 @NgModule({
-  declarations: [Exe01, Exe02, Exe03, Exe04, Exe05, Exe06, Exe07, Exe08],
+  declarations: [Exe01, Exe02, Exe03, Exe04, Exe05, Exe06, Exe07, Exe08, Exe09],
   imports: [CommonModule, ListaexeRoutingModule, FormsModule],
 })
 export class ListaexeModule {}

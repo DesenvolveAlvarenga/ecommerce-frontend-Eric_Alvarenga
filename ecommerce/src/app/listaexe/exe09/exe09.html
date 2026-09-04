@@ -1,0 +1,17 @@
+<h1>Exe 09</h1>
+
+
+<label>Produto:</label><br>
+<input type="text" [(ngModel)]="produto"><br><br>
+
+<p>Saldo Estoque do produto {{ produto }} é  {{ estoque }} </p>
+
+<button (click)="entrada()">
+    Entrada no estoque
+</button>
+
+@if(estoque > 0){
+<button (click)="saida()">
+    Saida do estoque
+</button>
+}
