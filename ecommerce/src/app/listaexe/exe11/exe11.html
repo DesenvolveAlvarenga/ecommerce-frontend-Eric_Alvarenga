@@ -1,0 +1,28 @@
+<h1>Exe11</h1>
+
+
+
+<label>Produto:</label><br>
+<input type="text" [(ngModel)]="produto"><br><br>
+
+
+<label>valor R$:</label><br>
+<input type="text" [(ngModel)]="valor"><br><br>
+
+<p>Quantidade {{ quantidade }} </p>
+
+<button (click)="aumentar()">
+    +
+</button>
+
+@if(quantidade > 0){
+<button (click)="diminuir()">
+    -
+</button>
+}
+
+@if(quantidade > 0 && produto){
+  <button (click)="adicionarCarrinho()">Adicionar ao Carrinho</button>
+}
+
+<h3>{{ mensagem }} </h3>
