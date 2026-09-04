@@ -1,0 +1,23 @@
+<h1>Exe08</h1>
+
+<label>Produto:</label><br>
+<input type="text" [(ngModel)]="produto"><br><br>
+
+<label>Preço:</label><br>
+<input type="number" [(ngModel)]="preco"><br><br>
+
+<label>Quantidade:</label><br>
+<input type="number" [(ngModel)]="quantidade"><br><br>
+
+
+<h3>Resumo do Produto</h3>
+<p>Produto: {{ produto }}</p>
+
+<h3>Resumo do Preço</h3>
+<p>Preço : {{ preco }}</p>
+
+<h3>Resumo da Quantidade</h3>
+<p>Quantidade: {{ quantidade }}</p>
+
+<h3>TOTAL</h3>
+<p>R$ {{ quantidade * preco }}</p>
