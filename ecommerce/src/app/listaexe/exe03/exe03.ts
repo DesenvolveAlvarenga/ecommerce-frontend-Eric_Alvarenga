@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './exe03.html',
   styleUrl: './exe03.scss',
 })
-export class Exe03 {}
+export class Exe03 {
+
+  imgProd = 'https://gdgc-osu.com/Angular.svg';
+  descProd = 'Logo Angular'
+}

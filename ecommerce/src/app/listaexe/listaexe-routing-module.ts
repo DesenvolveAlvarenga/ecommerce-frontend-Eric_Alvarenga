@@ -10,7 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'exe02', component: Exe02
-  }, {
+  },
+  {
     path: 'exe03', component: Exe03
   }
 ];
@@ -19,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ListaexeRoutingModule {}
+export class ListaexeRoutingModule { }
