@@ -4,9 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { ListaexeRoutingModule } from './listaexe-routing-module';
 import { Exe01 } from './exe01/exe01';
+import { Exe02 } from './exe02/exe02';
+import { Exe03 } from './exe03/exe03';
 
 @NgModule({
-  declarations: [Exe01],
+  declarations: [Exe01, Exe02, Exe03],
   imports: [CommonModule, ListaexeRoutingModule, FormsModule],
 })
 export class ListaexeModule {}
