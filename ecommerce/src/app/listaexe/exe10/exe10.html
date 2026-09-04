@@ -1,0 +1,15 @@
+<h1>Exe10</h1>
+
+
+<label>Email:</label> <br>
+<input type="email" id="email" [(ngModel)]="emailUser"><br>
+
+<label>Senha:</label> <br>
+<input type="password" id="password" [(ngModel)]="passwordUser">
+
+
+<button *ngIf="emailUser && passwordUser" (click)="login()">Entrar</button>
+
+<p>
+    {{ retorno }}
+</p>
