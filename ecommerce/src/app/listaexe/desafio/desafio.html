@@ -1,0 +1,29 @@
+<h1>desafio</h1>
+
+<label>Nome do Aluno: </label>
+<input type="text" [(ngModel)]="nome"><br>
+
+<p>Aluno: {{ nome }}</p>
+
+<label>Quantidade de Materias: {{ materia }}</label><br>
+
+<button (click)="mais()">
+   +
+</button>
+
+
+@if(materia > 0){
+<button (click)="menos()">
+    -
+</button>
+}
+
+<br>
+
+@if(nome && materia > 0){
+<button (click)="matricula()">
+    Enviar Matricula 
+</button>
+}
+
+<p> {{ mensagem }} </p>

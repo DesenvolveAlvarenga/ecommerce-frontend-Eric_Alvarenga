@@ -11,6 +11,7 @@ import { Exe08 } from './exe08/exe08';
 import { Exe09 } from './exe09/exe09';
 import { Exe10 } from './exe10/exe10';
 import { Exe11 } from './exe11/exe11';
+import { Desafio } from './desafio/desafio';
 
 const routes: Routes = [
   {
@@ -25,19 +26,21 @@ const routes: Routes = [
     path: 'exe04', component: Exe04
   }, {
     path: 'exe05', component: Exe05
-  },{
+  }, {
     path: 'exe06', component: Exe06
   },
   {
     path: 'exe07', component: Exe07
-  },{
+  }, {
     path: 'exe08', component: Exe08
   }, {
     path: 'exe09', component: Exe09
-  },{
+  }, {
     path: 'exe10', component: Exe10
   }, {
     path: 'exe11', component: Exe11
+  }, {
+    path: 'desafio', component: Desafio
   }
 ];
 
