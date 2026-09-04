@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './exe04.html',
   styleUrl: './exe04.scss',
 })
-export class Exe04 {}
+export class Exe04 {
+
+   button = true
+
+}
