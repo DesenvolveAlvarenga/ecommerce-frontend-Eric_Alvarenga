@@ -11,6 +11,9 @@ const routes: Routes = [
   }, {
     path: 'listaexe',
     loadChildren: ()=> import('./listaexe/listaexe-module').then(m => m.ListaexeModule)
+  },{
+    path: 'listaexe2',
+    loadChildren: ()=> import('./listaexe2/listaexe2-module').then(m => m.Listaexe2Module)
   }
 ];
 
