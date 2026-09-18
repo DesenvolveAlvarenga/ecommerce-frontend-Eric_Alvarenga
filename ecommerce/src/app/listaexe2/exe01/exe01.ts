@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './exe01.scss',
 })
 export class Exe01 {
-  mensagemVisivel:  boolean = true
+  mensagemVisivel:  boolean = false
 
   alternarMensagem(): void {
     this.mensagemVisivel = !this.mensagemVisivel;

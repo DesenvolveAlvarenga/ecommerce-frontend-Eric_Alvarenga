@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Exe01 } from './exe01/exe01';
+import { Exe02 } from './exe02/exe02';
 
 const routes: Routes = [ 
   {
     path: 'exe01', component: Exe01
+  }, {
+    path: 'exe02', component: Exe02
   }
 ];
 

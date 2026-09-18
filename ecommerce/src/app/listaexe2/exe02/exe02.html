@@ -1,0 +1,6 @@
+<h1>Exe 02</h1>
+
+<p *ngIf="!usuarioLogado">Logado </p>
+<p *ngIf="usuarioLogado">Deslogado </p>
+
+<button (click)="alternarBotao()"> {{ usuarioLogado ? 'Entrar' : 'Sair' }} </button>
