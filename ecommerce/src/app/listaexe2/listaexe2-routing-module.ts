@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Exe01 } from './exe01/exe01';
 import { Exe02 } from './exe02/exe02';
 import { Exe03 } from './exe03/exe03';
+import { Exe04 } from './exe04/exe04';
 
 const routes: Routes = [ 
   {
@@ -11,6 +12,8 @@ const routes: Routes = [
     path: 'exe02', component: Exe02
   }, {
     path: 'exe03', component: Exe03
+  }, {
+    path: 'exe04', component: Exe04
   }
 ];
 

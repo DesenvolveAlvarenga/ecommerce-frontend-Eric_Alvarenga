@@ -1,0 +1,11 @@
+<h1>Exe 04</h1>
+
+<p>Produto: {{ produto }} </p>
+
+<p>Estoque: {{ estoque }} </p>
+
+<button (click)="aumentarEstoque()">+</button>
+
+<button *ngIf="estoque  > 0" (click)="diminuirEstoque()">-</button>
+
+<p *ngIf="estoque > 0" >Produto Disponivle</p>
