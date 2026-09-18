@@ -1,0 +1,22 @@
+<h1>Exe 03</h1>
+
+<p> idade: {{ idade }} </p>
+
+<button (click)="aumentarIdade()">+</button>
+
+@if(idade > 0){
+    <button (click)="diminuirIdade()">-</button>
+}
+
+
+
+
+
+
+
+@if (idade < 12 ){ <p>Criança</p>
+    }@else if (idade >= 12 && idade <=17){ <p>Adolescente</p>
+        }@else if (idade > 17 && idade <=59){ <p>Adulto</p>
+            }@else{
+            <p>Idoso</p>
+            }
