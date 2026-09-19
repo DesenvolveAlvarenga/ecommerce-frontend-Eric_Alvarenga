@@ -1,0 +1,35 @@
+.filtro-box {
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  
+  label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #343a40;
+    color: #fff;
+  }
+}
