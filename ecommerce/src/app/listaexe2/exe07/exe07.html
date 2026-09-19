@@ -1,0 +1,15 @@
+<h1>Exe 07</h1>
+
+
+
+<ul>
+  <li *ngFor="let disciplina of disciplinas; let even = even; let odd = odd; let first = first; let last = last"
+      [ngClass]="{
+        'fundo-par': even,
+        'fundo-impar': odd,
+        'destaque-primeira': first,
+        'borda-ultima': last
+      }">
+    {{ disciplina }}
+  </li>
+</ul>
