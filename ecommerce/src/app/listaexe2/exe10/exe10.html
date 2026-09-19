@@ -1,0 +1,52 @@
+<h1>Exe 10</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Quantidade</th>
+      <th>Ação / Promoção</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produto of produtos; let i = index">
+      <td>{{ i + 1 }}</td>
+      
+     
+      <td [ngStyle]="{ 'font-weight': produto.promocao ? 'bold' : 'normal' }">
+        {{ produto.nome }}
+        
+     
+        <span *ngIf="produto.promocao" class="badge-promo">
+          Produto em promoção
+        </span>
+      </td>
+      
+  
+      <td [ngStyle]="{ 
+            'color': produto.promocao ? '#d9534f' : '#333', 
+            'font-weight': produto.promocao ? 'bold' : 'normal' 
+          }">
+        {{ produto.preco | currency:'BRL':'symbol':'1.2-2' }}
+      </td>
+      
+      <td>{{ produto.quantidade }}</td>
+      
+      <td>
+        <button (click)="alternarPromocao(produto)" 
+                [ngStyle]="{ 
+                  'background-color': produto.promocao ? '#d9534f' : '#0275d8', 
+                  'color': '#fff', 
+                  'border': 'none', 
+                  'padding': '6px 12px', 
+                  'border-radius': '4px', 
+                  'cursor': 'pointer' 
+                }">
+          {{ produto.promocao ? 'Desativar Promoção' : 'Ativar Promoção' }}
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin-top: 15px;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  th {
+    background-color: #343a40;
+    color: #fff;
+  }
+}
+
+.badge-promo {
+  background-color: #ff9800;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-left: 10px;
+  font-weight: normal;
+  display: inline-block;
+}
+
+button {
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}

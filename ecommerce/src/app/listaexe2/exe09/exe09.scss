@@ -24,16 +24,16 @@ table {
   font-size: 0.85rem;
 }
 
-/* Cores exigidas pelo exercício */
+
 .vermelho {
-  background-color: #dc3545; // Vermelho (Sem estoque)
+  background-color: #dc3545; 
 }
 
 .amarelo {
-  background-color: #ffc107; // Amarelo (Estoque baixo)
-  color: #212529;            // Texto escuro para contraste
+  background-color: #ffc107; 
+  color: #212529;           
 }
 
 .verde {
-  background-color: #28a745; // Verde (Estoque disponível)
+  background-color: #28a745; 
 }
