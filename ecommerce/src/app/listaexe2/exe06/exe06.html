@@ -1,0 +1,18 @@
+<h1>Exe 06</h1>
+
+<p><strong>Quantidade total de nomes:</strong> {{ nomes.length }}</p>
+
+<button (click)="removerUltimo()">Remover Último</button>
+<button (click)="limparLista()" style="margin-left: 10px;">Limpar Lista</button>
+<button (click)="restaurarLista()" style="margin-left: 10px;">Restaurar Lista</button>
+
+<div *ngIf="nomes.length > 0; else mensagemVazia">
+  <p *ngFor="let nome of nomes">
+    {{ nome }}
+  </p>
+</div>
+
+
+<ng-template #mensagemVazia>
+  <p >Nenhum nome cadastrado</p>
+</ng-template>
