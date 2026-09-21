@@ -1,0 +1,48 @@
+<h1>Exe 13</h1>
+
+<div class="resumo">
+  <p><strong>Total:</strong> {{ totalTarefas }}</p>
+  <p><strong>Concluídas:</strong> {{ concluidas }}</p>
+  <p><strong>Pendentes:</strong> {{ pendentes }}</p>
+</div>
+
+@if (tarefas.length > 0) {
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Título</th>
+        <th>Responsável</th>
+        <th>Prioridade</th>
+        <th>Situação</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (tarefa of tarefas; track tarefa.id; let i = $index) {
+        <tr [ngClass]="{ 'tarefa-concluida': tarefa.concluida }">
+          <td>{{ i + 1 }}</td>
+          <td>{{ tarefa.titulo }}</td>
+          <td>{{ tarefa.responsavel }}</td>
+          <td>
+            <span class="prioridade" [ngClass]="'prioridade-' + tarefa.prioridade">
+              {{ tarefa.prioridade }}
+            </span>
+          </td>
+          <td>
+            <span [ngClass]="tarefa.concluida ? 'status-concluido' : 'status-pendente'">
+              {{ tarefa.concluida ? 'Concluída' : 'Pendente' }}
+            </span>
+          </td>
+          <td>
+            <button (click)="alternarSituacao(tarefa)">
+              {{ tarefa.concluida ? 'Marcar Pendente' : 'Marcar Concluída' }}
+            </button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+} @else {
+  <p class="mensagem-vazia">Não existem tarefas cadastradas.</p>
+}
