@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin-top: 15px;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #343a40;
+    color: #fff;
+  }
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+
+.vermelho {
+  background-color: #dc3545; 
+}
+
+.amarelo {
+  background-color: #ffc107; 
+  color: #212529;           
+}
+
+.verde {
+  background-color: #28a745; 
+}

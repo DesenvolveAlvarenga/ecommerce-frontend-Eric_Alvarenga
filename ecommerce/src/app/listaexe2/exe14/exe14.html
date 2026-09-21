@@ -1,0 +1,73 @@
+<h1>Exe 14</h1>
+
+<h3>Vou refazer os seguintes exe, 04</h3>
+
+<h2>Exe 04</h2>
+
+<p>Produto: {{ produto }}</p>
+
+<p>Estoque: {{ estoque }}</p>
+
+<button (click)="aumentarEstoque()">+</button>
+
+@if (estoque > 0) {
+  <button (click)="diminuirEstoque()">-</button>
+  <p>Produto Disponível</p>
+} @else {
+  <p>Produto Esgotado</p>
+}
+
+<h2>Exe 06</h2>
+
+
+<p><strong>Quantidade total de nomes:</strong> {{ nomes.length }}</p>
+
+<button (click)="removerUltimo()">Remover Último</button>
+<button (click)="limparLista()" style="margin-left: 10px;">Limpar Lista</button>
+<button (click)="restaurarLista()" style="margin-left: 10px;">Restaurar Lista</button>
+
+<div>
+  @for (nome of nomes; track $index) {
+    <p>{{ nome }}</p>
+  } @empty {
+    <p>Nenhum nome cadastrado</p>
+  }
+</div>
+
+<h2>Exe 09</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Quantidade</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (produto of produtos; track produto.id; let i = $index) {
+      <tr>
+        <td>{{ i + 1 }}</td>
+        <td>{{ produto.nome }}</td>
+        <td>{{ produto.preco | currency:'BRL':'symbol':'1.2-2' }}</td>
+        <td>{{ produto.quantidade }}</td>
+        <td>
+          <span class="badge" 
+                [ngClass]="{
+                  'vermelho': produto.quantidade === 0,
+                  'amarelo': produto.quantidade >= 1 && produto.quantidade <= 5,
+                  'verde': produto.quantidade > 5
+                }">
+            {{ getStatusEstoque(produto.quantidade) }}
+          </span>
+        </td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="5" style="text-align: center;">Nenhum produto cadastrado.</td>
+      </tr>
+    }
+  </tbody>
+</table>

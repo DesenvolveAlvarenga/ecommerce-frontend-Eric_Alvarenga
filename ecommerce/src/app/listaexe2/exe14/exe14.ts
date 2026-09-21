@@ -1,12 +1,46 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-exe09',
+  selector: 'app-exe14',
   standalone: false,
-  templateUrl: './exe09.html',
-  styleUrl: './exe09.scss',
+  templateUrl: './exe14.html',
+  styleUrl: './exe14.scss',
 })
-export class Exe09 {
+export class Exe14 {
+
+  // SCRIPT DO EXE 04 - Esse comentario não é de IA kkkkk
+
+  produto = 'teclado';
+  estoque = 5;
+
+  aumentarEstoque() {
+    this.estoque++;
+  }
+
+  diminuirEstoque() {
+    this.estoque--;
+  }
+
+  // SCRIPT DO EXE 06 - Esse comentario não é de IA kkkkk
+ 
+  listaOriginal = ['Eric', 'Caio', 'Miguel', 'Arthut', 'Flavio'];
+
+  nomes = [...this.listaOriginal];
+
+  removerUltimo() {
+    this.nomes.pop();
+  }
+
+  limparLista() {
+    this.nomes = [];
+  }
+
+  restaurarLista() {
+    this.nomes = [...this.listaOriginal];
+  }
+
+  // SCRIPT DO EXE 09 - Esse comentario não é de IA kkkkk
+
 
   produtos = [
     { id: 1, nome: 'Notebook Gamer', preco: 4500.00, quantidade: 0 },   
@@ -28,5 +62,4 @@ export class Exe09 {
   }
 
 
-  
 }

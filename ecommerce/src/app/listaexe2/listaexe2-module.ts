@@ -16,6 +16,7 @@ import { Exe10 } from './exe10/exe10';
 import { Exe11 } from './exe11/exe11';
 import { Exe12 } from './exe12/exe12';
 import { Exe13 } from './exe13/exe13';
+import { Exe14 } from './exe14/exe14';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { Exe13 } from './exe13/exe13';
     Exe11,
     Exe12,
     Exe13,
+    Exe14,
   ],
   imports: [CommonModule, Listaexe2RoutingModule, FormsModule],
 })

@@ -22,6 +22,9 @@ export class Exe06 {
   restaurarLista(){
     this.nomes = [...this.listaOriginal]
   }
+
+  
+  
    
    
 }
