@@ -1,0 +1,83 @@
+.form-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: flex-end;
+  font-family: Arial, sans-serif;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+}
+
+.btn-cadastrar {
+  padding: 9px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 38px;
+
+  &:hover {
+    background-color: #218838;
+  }
+}
+
+.mensagem-erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px 12px;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.tabela-produtos {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #343a40;
+    color: #fff;
+  }
+}
+
+.btn-excluir {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+
+  &:hover {
+    background-color: #c82333;
+  }
+}

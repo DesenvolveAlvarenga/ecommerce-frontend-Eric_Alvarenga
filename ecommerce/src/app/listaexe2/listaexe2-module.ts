@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { Listaexe2RoutingModule } from './listaexe2-routing-module';
 import { Exe01 } from './exe01/exe01';
@@ -13,9 +14,27 @@ import { Exe08 } from './exe08/exe08';
 import { Exe09 } from './exe09/exe09';
 import { Exe10 } from './exe10/exe10';
 import { Exe11 } from './exe11/exe11';
+import { Exe12 } from './exe12/exe12';
 
 @NgModule({
-  declarations: [Exe01, Exe02, Exe03, Exe04, Exe05, Exe06, Exe07, Exe08, Exe09, Exe10, Exe11],
-  imports: [CommonModule, Listaexe2RoutingModule],
+  declarations: [
+    Exe01,
+    Exe02,
+    Exe03,
+    Exe04,
+    Exe05,
+    Exe06,
+    Exe07,
+    Exe08,
+    Exe09,
+    Exe10,
+    Exe11,
+    Exe12,
+  ],
+  imports: [
+    CommonModule, 
+    Listaexe2RoutingModule,
+    FormsModule 
+  ],
 })
 export class Listaexe2Module {}

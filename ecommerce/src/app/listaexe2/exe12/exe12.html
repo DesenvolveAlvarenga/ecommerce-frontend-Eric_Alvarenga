@@ -1,0 +1,42 @@
+<h1>Exe 12</h1>
+
+<p>Precisei de ajuda nesse aqui!</p>
+
+<div class="form-container">
+  <div class="input-group">
+    <label>Nome do Produto:</label>
+    <input type="text" [(ngModel)]="novoNome" placeholder="Ex: Teclado Mecânico">
+  </div>
+
+  <div class="input-group">
+    <label>Quantidade:</label>
+    <input type="number" [(ngModel)]="novaQuantidade" placeholder="Ex: 10">
+  </div>
+
+  <button (click)="cadastrarProduto()" class="btn-cadastrar">Cadastrar</button>
+</div>
+
+<div *ngIf="mensagemErro" class="mensagem-erro">
+  {{ mensagemErro }}
+</div>
+
+<table class="tabela-produtos">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Quantidade</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produto of produtos; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ produto.nome }}</td>
+      <td>{{ produto.quantidade }}</td>
+      <td>
+        <button (click)="excluirProduto(i)" class="btn-excluir">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
