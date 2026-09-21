@@ -1,0 +1,75 @@
+<h1>Desafio</h1>
+
+<h2>Painel de Projetos Integradores</h2>
+
+
+<div class="painel-resumo">
+  <p><strong>Total de Projetos:</strong> {{ totalProjetos }}</p>
+  <p><strong>Projetos Concluídos:</strong> {{ totalConcluidos }}</p>
+  <button (click)="alternarVisualizacaoConcluidos()">
+    {{ mostrarConcluidos ? 'Ocultar Concluídos' : 'Mostrar Concluídos' }}
+  </button>
+</div>
+
+
+@if (projetosExibidos.length > 0) {
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Título</th>
+        <th>Equipe</th>
+        <th>Nota</th>
+        <th>Status</th>
+        <th>Entrega / Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (projeto of projetosExibidos; track projeto.id; let i = $index) {
+        <tr [ngClass]="{
+          'destaque-nota-alta': projeto.nota !== null && projeto.nota >= 7,
+          'destaque-nota-baixa': projeto.nota !== null && projeto.nota < 6
+        }">
+   
+          <td>{{ i + 1 }}</td>
+      
+          <td>{{ projeto.titulo }}</td>
+          <td>{{ projeto.equipe }}</td>
+          
+        
+          <td>
+            @if (projeto.nota !== null) {
+              <span class="nota-valor">{{ projeto.nota }}</span>
+            } @else {
+              <span class="nota-indefinida">Nota ainda não definida</span>
+            }
+          </td>
+
+         
+          <td>
+            <span class="status-badge" [ngClass]="'status-' + projeto.status">
+              {{ projeto.status }}
+            </span>
+          </td>
+
+         
+          <td>
+            @if (projeto.entregue) {
+              <span class="tag-entregue">Projeto entregue</span>
+            }
+            <div class="alterar-status">
+              <select [(ngModel)]="projeto.status">
+                <option value="planejamento">Planejamento</option>
+                <option value="desenvolvimento">Desenvolvimento</option>
+                <option value="testes">Testes</option>
+                <option value="concluído">Concluído</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+} @else {
+  <p class="mensagem-vazia">Nenhum projeto encontrado com os filtros atuais.</p>
+}

@@ -1,0 +1,126 @@
+h2 {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.painel-resumo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: #f8f9fa;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  th {
+    background-color: #343a40;
+    color: #fff;
+  }
+}
+
+/* Classes CSS para cada Status (Requisito 4) */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-planejamento {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.status-desenvolvimento {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-testes {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-concluído {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Destaque para notas >= 7 (Requisito 7) */
+.destaque-nota-alta {
+  background-color: #f0fff4 !important;
+  border-left: 5px solid #28a745;
+}
+
+/* Sinalização para notas < 6 (Requisito 8) */
+.destaque-nota-baixa {
+  background-color: #fff5f5 !important;
+  border-left: 5px solid #dc3545;
+}
+
+.nota-indefinida {
+  color: #6c757d;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.tag-entregue {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.alterar-status {
+  select {
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.85rem;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
+
+.mensagem-vazia {
+  font-family: Arial, sans-serif;
+  color: #666;
+  font-style: italic;
+  margin-top: 15px;
+}
